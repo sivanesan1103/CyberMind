@@ -25,7 +25,8 @@ const COMPANY_LOGOS: { [key: string]: string } = {
   'amazon': '/amazon-icon.svg',
   'flipkart': '/flipkart-icon.svg',
   'microsoft': '/microsoft-icon.svg',
-  'swiggy': '/swiggy-icon.svg'
+  'swiggy': '/swiggy-icon.svg',
+  'tcs': '/tcs.png'
 };
 
 export const getCompanyIcon = (companyName: string) => {

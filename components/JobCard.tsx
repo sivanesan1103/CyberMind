@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { IJob } from '../models/Job';
 import { getCompanyIcon, getJobTypeDisplayName, truncateText } from '../lib/utils';
 import { useRouter } from 'next/navigation';
@@ -22,8 +23,8 @@ export default function JobCard({ job }: JobCardProps) {
       {/* Company Logo */}
       <div className="mb-3 w-18 h-18 bg-white rounded-[8px] shadow-lg flex justify-center items-center">
         <div className={`w-14 h-14 ${icon.color} rounded-full border-2 border-white flex items-center justify-center text-white font-bold text-md`}>
-          {icon.type === 'logo' ? (
-            <img src={icon.logo} alt={job.CompanyName} className="w-13 h-13 object-cover rounded-full" />
+          {icon.type === 'logo' && icon.logo ? (
+            <Image src={icon.logo} alt={job.CompanyName} width={52} height={52} className="w-13 h-13 object-cover rounded-full" />
           ) : (
             icon.letter
           )}
