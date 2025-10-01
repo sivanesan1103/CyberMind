@@ -3,9 +3,25 @@
 import { useState, useEffect } from 'react';
 import { getCompanyIcon } from '../lib/utils';
 
+interface JobFormData {
+  CompanyName: string;
+  Jobtitle: string;
+  experience: string;
+  location: string;
+  salary: string;
+  salaryMin: string;
+  salaryMax: string;
+  salaryValue: number;
+  JobType: string;
+  JobDescription: string;
+  postedTime: string;
+  Experience: string;
+  Jobicon: string;
+}
+
 interface CreateJobModalProps {
   onClose: () => void;
-  onSubmit: (data: any) => void;
+  onSubmit: (data: JobFormData) => void;
 }
 
 export default function CreateJobModal({ onClose, onSubmit }: CreateJobModalProps) {
@@ -36,6 +52,7 @@ export default function CreateJobModal({ onClose, onSubmit }: CreateJobModalProp
       try {
         const draftData = JSON.parse(savedDraft);
         // Remove the draft-specific fields before setting form data
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const { savedAt, isDraft, ...cleanDraftData } = draftData;
         setFormData(cleanDraftData);
       } catch (error) {
@@ -76,8 +93,7 @@ export default function CreateJobModal({ onClose, onSubmit }: CreateJobModalProp
       postedTime: '24h Ago',
       salary: (formData.salaryMin && formData.salaryMax) ? `${minSalary}-${maxSalary} LPA` : '0-60 LPA',
       salaryValue: maxSalary,
-      Jobicon: companyIcon.type === 'logo' ? companyIcon.logo : companyIcon.letter, // Use logo path or letter
-      status: 'published'
+      Jobicon: companyIcon.type === 'logo' && companyIcon.logo ? companyIcon.logo : (companyIcon.letter || 'C') // Use logo path or letter
     });
 
     // Clear draft after successful publish

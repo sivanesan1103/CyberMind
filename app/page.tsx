@@ -1,8 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { IJob } from '../models/Job';
 import { Header, SearchFilters, JobGrid, CreateJobModal, rangeSliderStyles, type JobFilters } from '../components';
+
+type JobFormData = Omit<IJob, '_id'>;
 
 export default function Home() {
   const [jobs, setJobs] = useState<IJob[]>([]);
@@ -33,11 +35,6 @@ export default function Home() {
     fetchJobs();
   }, []);
 
-  // Apply filters when jobs or filters change
-  useEffect(() => {
-    applyFilters();
-  }, [jobs, filters]);
-
   const fetchJobs = async () => {
     try {
       const response = await fetch('/api/jobs');
@@ -56,7 +53,7 @@ export default function Home() {
     }
   };
 
-  const applyFilters = () => {
+  const applyFilters = useCallback(() => {
     let filtered = [...jobs];
 
     // Search filter
@@ -87,9 +84,14 @@ export default function Home() {
     );
 
     setFilteredJobs(filtered);
-  };
+  }, [jobs, filters]);
 
-  const handleCreateJob = async (jobData: any) => {
+  // Apply filters when jobs or filters change
+  useEffect(() => {
+    applyFilters();
+  }, [applyFilters]);
+
+  const handleCreateJob = async (jobData: JobFormData) => {
     try {
       const response = await fetch('/api/jobs', {
         method: 'POST',
