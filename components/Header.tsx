@@ -6,7 +6,7 @@ interface HeaderProps {
 
 export default function Header({ onCreateJob }: HeaderProps) {
   return (
-    <header className="lg:py-3 md:py-8 bg-white">
+    <header className="lg:py-3 md:py-8 bg-white" style={{fontFamily: 'Satoshi, sans-serif'}}>
       <div className="2xl:container mx-auto">
         <div className="w-[95%] sm:w-[90%] md:w-[70%] lg:w-[60%] mx-auto">
           <nav className="bg-white shadow-md py-3 md:py-4 rounded-full ring-1 ring-gray-200">
@@ -45,38 +45,38 @@ export default function Header({ onCreateJob }: HeaderProps) {
 
               {/* Navigation Links - Desktop */}
               <div className="hidden md:flex space-x-6 lg:space-x-10 xl:space-x-16">
-                <a href="#" className="text-gray-700 hover:text-purple-600 text-sm font-medium transition-colors">
+                <a href="#" className="text-gray-800 hover:text-purple-600 text-sm font-medium transition-colors" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
                   Home
                 </a>
-                <a href="#" className="text-gray-700 hover:text-purple-600 text-sm font-medium transition-colors">
+                <a href="#" className="text-gray-800 hover:text-purple-600 text-sm font-medium transition-colors" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
                   Find Jobs
                 </a>
-                <a href="#" className="text-gray-700 hover:text-purple-600 text-sm font-medium transition-colors">
+                <a href="#" className="text-gray-800 hover:text-purple-600 text-sm font-medium transition-colors" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
                   Find Talents
                 </a>
-                <a href="#" className="text-gray-700 hover:text-purple-600 text-sm font-medium transition-colors">
+                <a href="#" className="text-gray-800 hover:text-purple-600 text-sm font-medium transition-colors" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
                   About us
                 </a>
-                <a href="#" className="text-gray-700 hover:text-purple-600 text-sm font-medium transition-colors">
+                <a href="#" className="text-gray-800 hover:text-purple-600 text-sm font-medium transition-colors" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
                   Testimonials
                 </a>
               </div>
 
               {/* Mobile Navigation - Simplified */}
               <div className="flex md:hidden space-x-4">
-                <a href="#" className="text-gray-700 hover:text-purple-600 text-xs font-medium">
+                <a href="#" className="text-gray-800 hover:text-purple-600 text-xs font-medium" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
                   Home
                 </a>
-                <a href="#" className="text-gray-700 hover:text-purple-600 text-xs font-medium">
+                <a href="#" className="text-gray-800 hover:text-purple-600 text-xs font-medium" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
                   Find Jobs
                 </a>
-                <a href="#" className="text-gray-700 hover:text-purple-600 text-xs font-medium">
+                <a href="#" className="text-gray-800 hover:text-purple-600 text-xs font-medium" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
                   Find Talents
                 </a>
-                <a href="#" className="text-gray-700 hover:text-purple-600 text-xs font-medium">
+                <a href="#" className="text-gray-800 hover:text-purple-600 text-xs font-medium" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
                   About us
                 </a>
-                <a href="#" className="text-gray-700 hover:text-purple-600 text-xs font-medium">
+                <a href="#" className="text-gray-800 hover:text-purple-600 text-xs font-medium" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
                   Testimonials
                 </a>
               </div>
@@ -85,6 +85,7 @@ export default function Header({ onCreateJob }: HeaderProps) {
               <button
                 onClick={onCreateJob}
                 className="bg-gradient-to-r from-[#A128FF] to-[#6100AD] hover:from-[#8B1FE6] hover:to-[#5200A1] text-white px-3 py-1.5 sm:px-4 md:px-5 md:py-2 rounded-full text-xs md:text-sm font-semibold transition-all flex-shrink-0"
+                style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '600'}}
               >
                 <span className="hidden sm:inline">Create Jobs</span>
                 <span className="sm:hidden">Create</span>
