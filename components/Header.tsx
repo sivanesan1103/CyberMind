@@ -8,9 +8,9 @@ export default function Header({ onCreateJob }: HeaderProps) {
   return (
     <header className="lg:py-3 md:py-8 bg-white" style={{fontFamily: 'Satoshi, sans-serif'}}>
       <div className="2xl:container mx-auto">
-        <div className="w-[95%] sm:w-[90%] md:w-[70%] lg:w-[60%] mx-auto">
+        <div className="w-[95%] sm:w-[90%] md:w-[70%] lg:w-[70%] mx-auto">
           <nav className="bg-white shadow-md py-3 md:py-4 rounded-full ring-1 ring-gray-200">
-            <div className="flex justify-between items-center px-4 sm:px-6 md:px-6 lg:px-8">
+            <div className="flex justify-between items-center px-10 sm:px-6 md:px-6 lg:px-8">
               {/* Logo */}
               <div className="flex-shrink-0">
                 <svg width="28" height="29" viewBox="0 0 44 46" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 md:w-8 md:h-8">
@@ -44,39 +44,39 @@ export default function Header({ onCreateJob }: HeaderProps) {
               </div>
 
               {/* Navigation Links - Desktop */}
-              <div className="hidden md:flex space-x-6 lg:space-x-10 xl:space-x-16">
-                <a href="#" className="text-gray-800 hover:text-purple-600 text-sm font-medium transition-colors" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
+              <div className="hidden md:flex space-x-8 lg:space-x-15 xl:space-x-25">
+                <a href="#" className="text-black-900 hover:text-purple-600 text-sm font-medium transition-colors" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
                   Home
                 </a>
-                <a href="#" className="text-gray-800 hover:text-purple-600 text-sm font-medium transition-colors" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
+                <a href="#" className="text-black-900 hover:text-purple-600 text-sm font-medium transition-colors" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
                   Find Jobs
                 </a>
-                <a href="#" className="text-gray-800 hover:text-purple-600 text-sm font-medium transition-colors" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
+                <a href="#" className="text-black-900 hover:text-purple-600 text-sm font-medium transition-colors" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
                   Find Talents
                 </a>
-                <a href="#" className="text-gray-800 hover:text-purple-600 text-sm font-medium transition-colors" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
+                <a href="#" className="text-black-900 hover:text-purple-600 text-sm font-medium transition-colors" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
                   About us
                 </a>
-                <a href="#" className="text-gray-800 hover:text-purple-600 text-sm font-medium transition-colors" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
+                <a href="#" className="text-black-900 hover:text-purple-600 text-sm font-medium transition-colors" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
                   Testimonials
                 </a>
               </div>
 
               {/* Mobile Navigation - Simplified */}
               <div className="flex md:hidden space-x-4">
-                <a href="#" className="text-gray-800 hover:text-purple-600 text-xs font-medium" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
+                <a href="#" className="text-black-900 hover:text-purple-600 text-xs font-medium" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
                   Home
                 </a>
-                <a href="#" className="text-gray-800 hover:text-purple-600 text-xs font-medium" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
+                <a href="#" className="text-black-900 hover:text-purple-600 text-xs font-medium" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
                   Find Jobs
                 </a>
-                <a href="#" className="text-gray-800 hover:text-purple-600 text-xs font-medium" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
+                <a href="#" className="text-black-900 hover:text-purple-600 text-xs font-medium" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
                   Find Talents
                 </a>
-                <a href="#" className="text-gray-800 hover:text-purple-600 text-xs font-medium" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
+                <a href="#" className="text-black-900 hover:text-purple-600 text-xs font-medium" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
                   About us
                 </a>
-                <a href="#" className="text-gray-800 hover:text-purple-600 text-xs font-medium" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
+                <a href="#" className="text-black-900 hover:text-purple-600 text-xs font-medium" style={{fontFamily: 'Satoshi, sans-serif', fontWeight: '500'}}>
                   Testimonials
                 </a>
               </div>
