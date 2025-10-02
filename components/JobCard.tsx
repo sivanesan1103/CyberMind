@@ -14,7 +14,7 @@ export default function JobCard({ job }: JobCardProps) {
   const router = useRouter();
 
   return (
-    <div className="bg-white rounded-[12px] px-7 py-2shadow-sm hover:shadow-[0_8px_20px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-all duration-300 relative border-12 border-transparent flex flex-col w-[98%] h-full">
+    <div className="bg-white rounded-[12px] px-3 py-3shadow-sm hover:shadow-[0_8px_20px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-all duration-300 relative border-16 border-transparent flex flex-col w-[98%] h-full">
       {/* Time Badge */}
       <div className="absolute top-4 right-4 bg-blue-200 text-blue-900 px-2 py-1 rounded-[8px] text-[10px] font-semibold">
         {job.postedTime}
